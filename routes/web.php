@@ -21,27 +21,27 @@ Route::get('/', function () {
 
 Auth::routes();
 
-// NAVBAR ======================================
-Route::get('/', [CommonController::class, 'homeIndex']);
-Route::get('/about-us', [CommonController::class, 'about-us-index']);
-Route::get('/FAQ', [CommonController::class, 'FAQ-index']);
-Route::get('/blog', [CommonController::class, 'blog-index']);
+// NAVBAR ====================================== <>
+Route::get('/', [CommonController::class, 'home_index']);
+Route::get('/about_us', [CommonController::class, 'about_us_index']);
+Route::get('/FAQ', [CommonController::class, 'FAQ_index']);
+Route::get('/blog', [CommonController::class, 'blog_index']);
 
-// MAIN =========================================
-Route::get('/dashboard', [CommonController::class, 'dashboard-index']);
+// MAIN ========================================= <>
+Route::get('/dashboard', [CommonController::class, 'dashboard_index']);
 
-// SIDEBAR =======================================
-Route::get('/ringkasan', [CommonController::class, 'ringkasan-index']);
-Route::get('/penarikan', [CommonController::class, 'penarikan-index']);
-Route::get('/investasi', [CommonController::class, 'investasi-index']); // DROPDOWN
-Route::get('/semua-bisnis', [CommonController::class, 'semua-bisnis-index']); // 1
-Route::get('/aktivitas', [CommonController::class, 'aktivitas-index']); // 2
-Route::get('/pertanyaan', [CommonController::class, 'pertanyaan-index']);
-Route::get('/pengaturan', [CommonController::class, 'pengaturan-index']); // DROPDOWN
-Route::get('/profil', [CommonController::class, 'profil-index']); // 1
-Route::get('/log-audit', [CommonController::class, 'log-audit-index']); // 2
-Route::get('/kata-sandi', [CommonController::class, 'kata-sandi-index']); // 3
-Route::get('/verifikasi-identitas', [CommonController::class, 'verifikasi-identitas-index']); // 4
+// SIDEBAR ======================================= <>
+Route::get('/ringkasan', [CommonController::class, 'ringkasan_index']);
+Route::get('/penarikan', [CommonController::class, 'penarikan_index']);
+Route::get('/investasi', [CommonController::class, 'investasi_index']); // HAS DROPDOWN a <>
+Route::get('/semua_bisnis', [CommonController::class, 'semua_bisnis_index']); // a 1
+Route::get('/aktivitas', [CommonController::class, 'aktivitas_index']); // a 2
+Route::get('/pertanyaan', [CommonController::class, 'pertanyaan_index']);
+Route::get('/pengaturan', [CommonController::class, 'pengaturan_index']); // HAS DROPDOWN b <>
+Route::get('/profil', [CommonController::class, 'profil_index']); // b 1
+Route::get('/log_audit', [CommonController::class, 'log_audit_index']); // b 2
+Route::get('/kata_sandi', [CommonController::class, 'kata_sandi_index']); // b 3
+Route::get('/verifikasi_identitas', [CommonController::class, 'verifikasi_identitas_index']); // b 4
 
 Route::middleware(['auth'])->group(function(){
 });
